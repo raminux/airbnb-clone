@@ -3,3 +3,12 @@ git add .
 git commit -m "some comment"
 git push -u oriign main
 ////////////////////////////////////////////////////////////
+
+//// Creating a Core app to be used in other app /////////
+Sometimes, it is necessary to duplicate some portions of code 
+in different apps. To alleviate this issue and preserve the consistency
+of the project, it is of good practice to create a core app and put 
+common codes there. For example, "created" and "updated" are two model members
+that can be used in many models. 
+Also, we have initialized the room application in this commit.
+//////////////////////////////////////////////////////////
