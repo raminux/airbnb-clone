@@ -12,3 +12,13 @@ common codes there. For example, "created" and "updated" are two model members
 that can be used in many models. 
 Also, we have initialized the room application in this commit.
 //////////////////////////////////////////////////////////
+
+/// Completing Room model ////////////////////////////////
+First, we have to install a django library for countries, as
+pipenv shell
+pipenv install django-countries
+Then, add django_countries to installed apps. 
+Now, one just needs to import it and use it, as
+from django_countries.fields import CountryField
+Next, add all the required fields to the Room model.
+/////////////////////////////////////////////////////////
