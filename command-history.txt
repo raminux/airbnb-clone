@@ -30,3 +30,7 @@ define an abstract class for items with two fields called name, and
 maybe subtitle. Then, using this abstract class, I define other classes
 for my purposes. 
 //////////////////////////////////////////////////////////
+
+/////// Adding other items to a room /////////////////////
+such as amenities, ...
+//////////////////////////////////////////////////////////
