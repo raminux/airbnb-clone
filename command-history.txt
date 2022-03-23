@@ -46,3 +46,6 @@ Meta class of a Model have many options that we can use to
 Rooms can have many photos. So, we create a Photo class and 
 assign each photo to a room by a foreignkey concept. 
 ////////////////////////////////////////////////////////////
+
+///// Completing the Review Class Model/////////////////////
+////////////////////////////////////////////////////////////
