@@ -21,28 +21,33 @@ class Amenity(AbstractItem):
 
     """Amenity Model Definition"""
 
-    pass
+    class Meta:
+        verbose_name_plural = "Amenities"
 
 
 class RoomType(AbstractItem):
 
     """Room type Model Definition"""
 
-    pass
+    class Meta:
+        verbose_name = "Room Type"
+        ordering = ["name"]
 
 
 class Facility(AbstractItem):
 
     """Facility Model Definition"""
 
-    pass
+    class Meta:
+        verbose_name_plural = "Facilities"
 
 
 class HouseRule(AbstractItem):
 
     """HouseRule Model Definition"""
 
-    pass
+    class Meta:
+        verbose_name = "House Rule"
 
 
 class Room(core_models.TimeStampedModel):

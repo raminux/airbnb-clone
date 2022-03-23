@@ -34,3 +34,10 @@ for my purposes.
 /////// Adding other items to a room /////////////////////
 such as amenities, ...
 //////////////////////////////////////////////////////////
+
+////// Working with Meta class ////////////////////////////
+Meta class of a Model have many options that we can use to
+ configure the behavior of the class. For example, verbose_name and 
+ verbose_name_plural can be used to define the name of the class in 
+ plural situations. 
+///////////////////////////////////////////////////////////
