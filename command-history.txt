@@ -22,3 +22,11 @@ Now, one just needs to import it and use it, as
 from django_countries.fields import CountryField
 Next, add all the required fields to the Room model.
 /////////////////////////////////////////////////////////
+
+///// How to use manytomany relationships ////////////////
+In this commit, I want to use manytomany relationships to 
+create room types, amenities, and son on. To do so, I need to 
+define an abstract class for items with two fields called name, and 
+maybe subtitle. Then, using this abstract class, I define other classes
+for my purposes. 
+//////////////////////////////////////////////////////////
