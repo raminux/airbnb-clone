@@ -41,3 +41,8 @@ Meta class of a Model have many options that we can use to
  verbose_name_plural can be used to define the name of the class in 
  plural situations. 
 ///////////////////////////////////////////////////////////
+
+///// Adding Photo Class to the Room model///////////////////
+Rooms can have many photos. So, we create a Photo class and 
+assign each photo to a room by a foreignkey concept. 
+////////////////////////////////////////////////////////////
