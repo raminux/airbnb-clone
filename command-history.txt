@@ -62,3 +62,10 @@ messages to each other. To model this procedure as a database entity,
 we define a conversation class with participants as manytomany field. 
 Then, we define a Message class that connects to the Conversation class. 
 ////////////////////////////////////////////////////////////
+
+//// Improving the Admin panel for Room model//////////////
+///////////////////////////////////////////////////////////
+
+/////// Customizing Room admin panel ///////////////////////
+ordering with specific columns 
+////////////////////////////////////////////////////////////
