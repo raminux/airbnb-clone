@@ -55,3 +55,10 @@ assign each photo to a room by a foreignkey concept.
 
 ////// Completing List Model //////////////////////////////
 ///////////////////////////////////////////////////////////
+
+///// Adding Conversation and Message Model/////////////////
+During a conversation, multiple users can participate and send 
+messages to each other. To model this procedure as a database entity, 
+we define a conversation class with participants as manytomany field. 
+Then, we define a Message class that connects to the Conversation class. 
+////////////////////////////////////////////////////////////
