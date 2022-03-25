@@ -112,4 +112,5 @@ host = models.ForiegnKey("users.User", related_name="rooms", on_delete="models.C
 now, we can access the rooms of a user from the user object by calling as:
 user.rooms.all() == user.room_set.all()
 
+Change the related_name of all foriegnkey and manytomany fields. 
 /////////////////////////////////////////////////////////////
