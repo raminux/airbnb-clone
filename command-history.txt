@@ -106,4 +106,10 @@ foreignkey from Room table to the User table. It is awesome.
 >>>airbnb.room_set.all()
 <QuerySet [<Room: Ramin's Mansion>]>
 >>>
+Another way to access rooms of a user is to define a related_name field when 
+defining a forienkey such as:
+host = models.ForiegnKey("users.User", related_name="rooms", on_delete="models.CASCADE")
+now, we can access the rooms of a user from the user object by calling as:
+user.rooms.all() == user.room_set.all()
+
 /////////////////////////////////////////////////////////////
