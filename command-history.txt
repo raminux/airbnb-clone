@@ -76,3 +76,34 @@ show some stattistics in the admin panel. For example, Django does
 not support manytomany fields to be displayed via list_display variable. 
 To do so, it is required to define a custom function and handle it manually. 
 /////////////////////////////////////////////////////////////
+
+///// How to work with model Managers and Querysets /////////
+It is of utmost important to know how to work with django models using 
+Managers and Querysets. To do so, we can enable django-shell and investigate 
+the different models using commandline. To activate django-shell, type the following 
+command in your pipenv-enabled shell:
+$python manage.py shell
+--> Managers help to retrieve rows from the database without writing 
+any sql queries.
+>>>from users.models import User
+>>>User.objects
+<django.contrib.auth.models.UserManager object at 0x7fd4dc944fd0>
+>>>User.objects.all()
+<QuerySet [<User: airbnb>, <User: ramin>]>
+As you can see, user manager returns a Queryset. 
+There are two python functions namely, vars and dir that are helpful for 
+investigating classes. Look at the examples below:
+>>>all_users=User.objects.all()
+>>>dir(all_users)  --> returns all methods and properties of an object
+..., 'count', 'create', 'dates', ....
+>>>vars(all_users) --> returns changeable attributes of an object
+Now, let's discover something interesting. 
+>>>airbnb=User.objects.get(username="airbnb")
+>>>dir(airbnb)
+... , 'reservation_set', 'review_set', 'room_set', 'save', 'save_base', ...
+You see something interesting, "*_set". this object shows that there is a 
+foreignkey from Room table to the User table. It is awesome. 
+>>>airbnb.room_set.all()
+<QuerySet [<Room: Ramin's Mansion>]>
+>>>
+/////////////////////////////////////////////////////////////
