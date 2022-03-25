@@ -69,3 +69,10 @@ Then, we define a Message class that connects to the Conversation class.
 /////// Customizing Room admin panel ///////////////////////
 ordering with specific columns 
 ////////////////////////////////////////////////////////////
+
+/////// Defining custom function in Admin Model for Room/////
+It is sometimes necessary to define some custom functions to 
+show some stattistics in the admin panel. For example, Django does 
+not support manytomany fields to be displayed via list_display variable. 
+To do so, it is required to define a custom function and handle it manually. 
+/////////////////////////////////////////////////////////////

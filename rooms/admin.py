@@ -27,6 +27,7 @@ class RoomAdmin(admin.ModelAdmin):
         "check_in",
         "check_out",
         "instant_book",
+        "count_amenities",
     )
     list_filter = (
         "instant_book",
@@ -72,6 +73,11 @@ class RoomAdmin(admin.ModelAdmin):
         ),
         ("Last Details", {"fields": ("host",)}),
     )
+
+    def count_amenities(self, obj):
+        return obj.amenities.count()
+
+    count_amenities.short_description = "Number of amenities"
 
 
 @admin.register(models.Photo)
