@@ -156,3 +156,23 @@ raw_id_fields  ---> This variable is used when we have a foriegnkey in a table
  that foriegnkey. 
 
 /////////////////////////////////////////////////////////////
+
+///// Django Model.save() and Admin.save_model() /////////////
+There are two save methods two intercept the save process. The one inside the 
+model is called by any saving process. But, the one inside the Admin panel is only called when
+ the admin saves the model. This is very useful to change the admin save method for 
+ different admins. This is a really cool feature of Django. 
+//////////////////////////////////////////////////////////////
+
+///// How to add custom commands to Django manage.py /////////////////
+First, inside each app create the following directories and files:
+management
+        |
+        |__init__.py
+        |commands
+                |__init__.py
+                |mycommand.py
+
+That python file can be run as:
+$ python manage.py mycommand
+/////////////////////////////////////////////////////////////////////

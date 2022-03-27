@@ -66,7 +66,14 @@ class RoomAdmin(admin.ModelAdmin):
         (
             "Basic Information",
             {
-                "fields": ("name", "description", "country", "address", "price"),
+                "fields": (
+                    "name",
+                    "description",
+                    "country",
+                    "city",
+                    "address",
+                    "price",
+                ),
             },
         ),
         (
@@ -87,6 +94,10 @@ class RoomAdmin(admin.ModelAdmin):
     )
 
     raw_id_fields = ("host",)
+
+    def save_model(self, request, obj, form, change):
+        # do whatever you want here
+        super().save_model(request, obj, form, change)
 
     def count_amenities(self, obj):
         return obj.amenities.count()
