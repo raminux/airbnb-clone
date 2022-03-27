@@ -123,7 +123,19 @@ Sometimes we need to have some statistics to show to users. In this case,
 it is better to define methods inside the model to do the task for us. 
 //////////////////////////////////////////////////////////////
 
-/////improving List, Message, and Conversation Admin/////////////////////////////////////
+/////improving List, Message, and Conversation Admin//////////////////////
 We can define methods inside Models and then use them inside Admins and
  wherever they suit.
 /////////////////////////////////////////////////////////////
+
+//////// How to use Media in Django ///////////////////////
+To upload photos and other types of media, we need to tell Django where we want 
+to save them on the filesystem. To do so, there is a variable called MEDIA_ROOT 
+inside settings.py, which is suitable for this purpose.
+
+Also, remember to add this directory to the .gitignore file. 
+
+Also, it is required to add "upload_to" argument to ImageField inside Models. 
+When we upload a photo, that will be saved in the directory pointed to by upload_to 
+inside the MEDIA_ROOT directory. 
+///////////////////////////////////////////////////////////
