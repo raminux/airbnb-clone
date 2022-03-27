@@ -145,3 +145,14 @@ Adding thumbnail to the Photo Admin. Because of security reasons, Django
 won't interpret your html and js codes inside a string. To let it know that I know 
 what I do, use mark_safe method with your html-included string. 
 ///////////////////////////////////////////////////////////
+
+/////// Some more points about Admin ////////////////////////
+raw_id_fields  ---> This variable is used when we have a foriegnkey in a table
+ and we want to be able to easily select its value with a nice interface. Then, using this
+ makes life more fun. 
+
+ admin.TabularInline  --->There is also a nice feature in the admin panel that makes Django a fantastic 
+ framework. You can fill elements of the foriegnkey table inside the admin panel that is the source of 
+ that foriegnkey. 
+
+/////////////////////////////////////////////////////////////
