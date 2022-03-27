@@ -116,3 +116,14 @@ Change the related_name of all foriegnkey and manytomany fields.
 
 Using the related_name option make life easier. 
 /////////////////////////////////////////////////////////////
+
+////////// Improving All Admins //////////////////////////////
+In this section, we learn how to define methods inside Models. 
+Sometimes we need to have some statistics to show to users. In this case, 
+it is better to define methods inside the model to do the task for us. 
+//////////////////////////////////////////////////////////////
+
+/////improving List, Message, and Conversation Admin/////////////////////////////////////
+We can define methods inside Models and then use them inside Admins and
+ wherever they suit.
+/////////////////////////////////////////////////////////////
