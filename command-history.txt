@@ -176,3 +176,11 @@ management
 That python file can be run as:
 $ python manage.py mycommand
 /////////////////////////////////////////////////////////////////////
+
+//////// Seed Amenities, Facilities, .... ////////////////////////////
+There is a useful django package to create fake data and fill database. 
+In this section, we want to install and use it. 
+$pipenv install django_seed
+$pipenv install psycopg2
+Then, put it into installed_apps. 
+/////////////////////////////////////////////////////////////////////
