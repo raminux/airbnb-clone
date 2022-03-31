@@ -209,3 +209,13 @@ Django templates provide a powerful way for structuring the project in a logical
 The idea is to divie annd conquer the project frontend with a simple and effective 
 structure. 
 ///////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////// Pagination ////////////////////////////////
+When you are deciding to show lots of content in your pages, it is a good 
+idea to show them in chunks and not to query all them from the database. In this regard, 
+it is helpful to use the pagination mechanism. In this part, we want to show the pagination
+ process both manually and automatically using Django capabilities.
+ 
+
+
+///////////////////////////////////////////////////////////////////////////
