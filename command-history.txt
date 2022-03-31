@@ -232,5 +232,7 @@ There is still another method using django-based classes that only require to
 configure the paginator parameters. That is cool!
 The great website for understanding class-based views is https://ccbv.co.uk/
 
+In class-based views, we can add multiple values to the context using 
+get_context_data method. 
 
 ///////////////////////////////////////////////////////////////////////////
