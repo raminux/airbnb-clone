@@ -222,4 +222,6 @@ it is necessary to use django tags to increase and decrease the value of page as
 <a href="?page={{page|add:1}}">Next</a>
 <a href="?page={{page|add:-1}}">Previous</a>
 
+The next method is to use Django's pagination feature. 
+
 ///////////////////////////////////////////////////////////////////////////
