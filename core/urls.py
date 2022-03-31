@@ -5,5 +5,5 @@ app_name = "core"
 
 
 urlpatterns = [
-    path("", room_views.all_rooms, name="home"),
+    path("", room_views.HomeView.as_view(), name="home"),
 ]

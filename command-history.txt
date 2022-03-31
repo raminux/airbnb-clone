@@ -224,4 +224,13 @@ it is necessary to use django tags to increase and decrease the value of page as
 
 The next method is to use Django's pagination feature. 
 
+the orphans argument of the Paginator class is used to show the last remaining 
+items in the last page if number of remaining items is less than or equal to 
+the orphans. 
+
+There is still another method using django-based classes that only require to 
+configure the paginator parameters. That is cool!
+The great website for understanding class-based views is https://ccbv.co.uk/
+
+
 ///////////////////////////////////////////////////////////////////////////
