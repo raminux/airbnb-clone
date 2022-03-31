@@ -202,5 +202,10 @@ we place homepage url is the core app.
 --> We put all templates in a directory called templates at the root of the project. 
 To do so, it is required to add some codes to the settings file. 
 
-
 //////////////////////////////////////////////////////////////////////////
+
+///////////////// Basic structure of Templates ////////////////////////////
+Django templates provide a powerful way for structuring the project in a logical manner. 
+The idea is to divie annd conquer the project frontend with a simple and effective 
+structure. 
+///////////////////////////////////////////////////////////////////////////
