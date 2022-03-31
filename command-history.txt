@@ -215,7 +215,11 @@ When you are deciding to show lots of content in your pages, it is a good
 idea to show them in chunks and not to query all them from the database. In this regard, 
 it is helpful to use the pagination mechanism. In this part, we want to show the pagination
  process both manually and automatically using Django capabilities.
- 
 
+There are cool things about django templates which are called template tags and 
+filters. When designing a manual pagination using "Next and Previous" concept, 
+it is necessary to use django tags to increase and decrease the value of page as:
+<a href="?page={{page|add:1}}">Next</a>
+<a href="?page={{page|add:-1}}">Previous</a>
 
 ///////////////////////////////////////////////////////////////////////////
