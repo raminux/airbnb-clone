@@ -236,3 +236,9 @@ In class-based views, we can add multiple values to the context using
 get_context_data method. 
 
 ///////////////////////////////////////////////////////////////////////////
+
+///////////////// urls and arguments //////////////////////////////////////
+Django provides a nice interface to accept url arguments and use them inside 
+the views. Using 'app_name' and 'namespace', and 'name' make it easy to use django templates to 
+handle url patterns via {% url 'namespace:name' url_arguments %}.
+///////////////////////////////////////////////////////////////////////////
