@@ -242,3 +242,11 @@ Django provides a nice interface to accept url arguments and use them inside
 the views. Using 'app_name' and 'namespace', and 'name' make it easy to use django templates to 
 handle url patterns via {% url 'namespace:name' url_arguments %}.
 ///////////////////////////////////////////////////////////////////////////
+
+////// How to use urls in models and django admin //////////////////////////
+Sometimes it is useful to access a model-row's view on the site. For example, 
+consider a situation where you want to see a room detail page by pressing a button 
+on the admin panel. To do so, there is a method called get_absolute_url in the model class.
+Check for its implementation on the Room model.
+
+////////////////////////////////////////////////////////////////////////////
