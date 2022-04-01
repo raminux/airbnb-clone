@@ -257,6 +257,6 @@ Then, send that information to the detail template and render there.
 Show different information via html. 
 --> An important point that we have to pay attention to is that, sometimes, there is no
  record in the database for what we are querying it. At those situations, we have to use try/except
-  block or another method.
+  block or another method and redirect it to a 404 page. See the commit for more detail.
   Also, try to use reverse method as much as possible. 
 /////////////////////////////////////////////////////////////////////////////
