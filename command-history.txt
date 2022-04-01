@@ -260,3 +260,9 @@ Show different information via html.
   block or another method and redirect it to a 404 page. See the commit for more detail.
   Also, try to use reverse method as much as possible. 
 /////////////////////////////////////////////////////////////////////////////
+
+////////// Class-based view for Room detail page ///////////////////////////
+It is required to configure this class to work properly. 
+Remember that we learn by seeing errors. In other words, with trial and error process. 
+DetailView will automatically handle the 404 situation. 
+////////////////////////////////////////////////////////////////////////////
