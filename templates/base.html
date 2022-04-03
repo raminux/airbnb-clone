@@ -10,7 +10,18 @@
 
 <body>
 
-    {% include "partials/header.html" %}
+    <header>
+
+        {% include "partials/header.html" %}
+        {% block search-bar %}
+        <form metho="get" action="{% url 'rooms:search' %}">
+            <input name="city" placeholder="Search by city" />
+        </form>
+        {% endblock search-bar %}
+
+    </header>
+
+
 
     {% block content %}{% endblock content %}
 
