@@ -12,7 +12,7 @@
 
     <header>
 
-        {% include "partials/header.html" %}
+        {% include "partials/nav.html" %}
         {% block search-bar %}
         <form metho="get" action="{% url 'rooms:search' %}">
             <input name="city" placeholder="Search by city" />

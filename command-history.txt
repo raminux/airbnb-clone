@@ -272,4 +272,6 @@ Airbnb has a nice GUI for searching with the help of React. Here, we concentrate
 on the functionality of the search method or view. At the beginnig, it is necessary 
 to establish the basic structure for this purpose like adding view, url, form, input name. 
 
+We can search for various features for a room such as country, room type, and ... .
+
 ////////////////////////////////////////////////////////////////////////////
