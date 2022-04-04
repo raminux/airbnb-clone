@@ -34,9 +34,19 @@ class RoomDetail(DetailView):
 def search(request):
     city = request.GET.get("city", "Anywhere")
     city = str.capitalize(city)
+    selected_country = request.GET.get("country", "IR")
+    selected_room_type = int(request.GET.get("room_type", 0))
     room_types = models.RoomType.objects.all()
+    form = {
+        "city": city,
+        "selected_country": selected_country,
+        "selected_room_type": selected_room_type,
+    }
+    choices = {"countries": countries, "room_types": room_types}
+    test = {**form, **choices}
+    print(f"**form, **choices = {test}")
     return render(
         request,
         "rooms/search.html",
-        {"city": city, "countries": countries, "room_types": room_types},
+        {**form, **choices},
     )

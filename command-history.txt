@@ -274,4 +274,21 @@ to establish the basic structure for this purpose like adding view, url, form, i
 
 We can search for various features for a room such as country, room type, and ... .
 
+Also, it is necessary to show the selected options to the user after pressing search btn.
+
+The following Django template tag does not work:
+
+<option value="{{room_type.pk}}" 
+{% if selected_room_type == room_type.pk %} selected {% endif %}>
+{{room_type.name}}
+</option>
+but instead the following works:
+{% if selected_room_type == room_type.pk %}
+<option value="{{room_type.pk}}" 
+ selected >
+{{room_type.name}}
+</option>
+{% endif %}
+
+
 ////////////////////////////////////////////////////////////////////////////
