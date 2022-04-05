@@ -296,4 +296,8 @@ but instead the following works:
 Django's ORM supports various conditional filtering that we are going to examine 
 them in the following section.
 
+Django provides powerful forms to make life easier for us. In this part, 
+we're going to develop a form for room search.Let's do it professionally. 
+To remember user selected choices, it is only required to add request.GET as 
+an argument to the form: forms.SearchForm(request.GET).
 ///////////////////////////////////////////////////////////////////////////
