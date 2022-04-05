@@ -310,5 +310,6 @@ and sending it back in the context to render in the href of next and previous ta
 LoginView---->
 - basic setup including url, view, template
 - adding simple form to login user
+- adding clean_email to the form to validate user email
 
 /////////////////////////////////////////////////////////////////////////////
