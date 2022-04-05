@@ -300,4 +300,8 @@ Django provides powerful forms to make life easier for us. In this part,
 we're going to develop a form for room search.Let's do it professionally. 
 To remember user selected choices, it is only required to add request.GET as 
 an argument to the form: forms.SearchForm(request.GET).
+
+Adding pagination to the room search is a bit challenging, but I solved it
+using get_full_path method and a little bit of slicing to find the appropriate href 
+and sending it back in the context to render in the href of next and previous tags.
 ///////////////////////////////////////////////////////////////////////////

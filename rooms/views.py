@@ -1,5 +1,7 @@
+from math import ceil
 from django.utils import timezone
 from django.shortcuts import render
+from django.core.paginator import Paginator
 from django.views.generic import ListView, DetailView, View
 from . import models, forms
 
@@ -60,7 +62,7 @@ class SearchView(View):
                 if city != "Anywhere":
                     filter_args["city"] = city
 
-                filter_args["country"] = country
+                # filter_args["country"] = country
 
                 if room_type is not None:
                     filter_args["room_type"] = room_type
@@ -86,21 +88,38 @@ class SearchView(View):
                 if superhost is True:
                     filter_args["host__superhost"] = True
 
-                rooms = models.Room.objects.filter(**filter_args)
+                qs_rooms = models.Room.objects.filter(**filter_args)
 
                 for amenity in amenities:
-                    rooms = rooms.filter(amenities=amenity)
+                    qs_rooms = qs_rooms.filter(amenities=amenity)
 
                 for facility in facilities:
-                    rooms = rooms.filter(facilities=facility)
+                    qs_rooms = qs_rooms.filter(facilities=facility)
 
-                print(filter_args)
+                print(request.get_full_path())
+                qs_rooms = qs_rooms.order_by("created")
+
+                page_size = 10
+                page = request.GET.get("page")
+                page = int(page or 1)
+                paginator = Paginator(qs_rooms, page_size, orphans=5)
+                rooms = paginator.get_page(page)
+
+                href = request.get_full_path()
+                if "page" in href:
+                    print(href)
+                    index = [i for i, ltr in enumerate(href) if ltr == "&"]
+                    index = index[-1]
+                    print(index)
+                    href = href[0:index]
+
                 return render(
                     request,
                     "rooms/search.html",
                     {
                         "form": form,
                         "rooms": rooms,
+                        "href": href,
                     },
                 )
         else:
