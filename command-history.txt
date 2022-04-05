@@ -305,3 +305,9 @@ Adding pagination to the room search is a bit challenging, but I solved it
 using get_full_path method and a little bit of slicing to find the appropriate href 
 and sending it back in the context to render in the href of next and previous tags.
 ///////////////////////////////////////////////////////////////////////////
+
+/////// User related views///////////////////////////////////////////////////
+LoginView---->
+- basic setup including url, view, template
+
+/////////////////////////////////////////////////////////////////////////////
