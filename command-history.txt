@@ -311,5 +311,11 @@ LoginView---->
 - basic setup including url, view, template
 - adding simple form to login user
 - adding clean_email to the form to validate user email
-
+- adding clean method and removing clean_email and clean_password:
+  The reason behind this decision is that when checking for password
+  validity, we need to query the database to find the user. Although we 
+  can can solve this problem with a variable inside the class, but we prefer
+   to use another forms method called "clean". This is better. 
+   Also, there is a cool method called add_error, that can be used to associate
+   an error to a specific form variable. 
 /////////////////////////////////////////////////////////////////////////////
