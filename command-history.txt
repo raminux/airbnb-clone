@@ -319,4 +319,6 @@ LoginView---->
    Also, there is a cool method called add_error, that can be used to associate
    an error to a specific form variable. 
 - authentication, login, and logout
+- Ofcourse, the next step is to would be to use FormView class to write our LoginView. 
+
 /////////////////////////////////////////////////////////////////////////////
