@@ -323,5 +323,9 @@ LoginView---->
 SignUpView------>>>
 - basic setup including url, template, view, form,.
 - create_user, authenticate, and login the new user into the platform
-- 
+ModelForm ----->>>>
+This class makes it possible to create forms using models. This ia fantastic!
+Because with the help of this capability of Django, there is no need to define the 
+fields of the forms manually. It is done automatically via ModelForm. 
+Lets rebuild SignUpForm using ModelForm.
 /////////////////////////////////////////////////////////////////////////////
