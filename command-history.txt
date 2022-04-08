@@ -328,4 +328,20 @@ This class makes it possible to create forms using models. This ia fantastic!
 Because with the help of this capability of Django, there is no need to define the 
 fields of the forms manually. It is done automatically via ModelForm. 
 Lets rebuild SignUpForm using ModelForm.
+
+-Email configs and usage ------>>>>>>>>
+First, we have to set some email-related configs in settings.py, then use send_email
+method to achieve the goal of user registration of sending newsletters. 
+an important point that must be taken into account is that never expose your credentials in 
+the settings.py file. Use other files or environment valriables to store passwords or keys. Also, 
+bare into mind that you must put these files into the .gitignore file to prevent them from 
+publishing genrelly. 
+There is a django package for this purpose called django-dotenv.
+$ pipenv install django-dotenv
+Also, we have to create a .env file to put all security constants there.
+Now, We can read environment variables using os.environ.get(blalbla).
+For verifying user email, it is necessary to have two fields in the model called
+email_confirmed and email_secret. Also, we're going to define verify_email methd inside the 
+Uder model so we can use it whenever we need to verify a user email, for example if a 
+user wants to change his/her email. 
 /////////////////////////////////////////////////////////////////////////////

@@ -144,3 +144,13 @@ AUTH_USER_MODEL = "users.User"
 MEDIA_ROOT = os.path.join(BASE_DIR, "uploads")
 # print(f"MEDIA_ROOT: {MEDIA_ROOT}")
 MEDIA_URL = "/media/"
+
+# Emain Configuration
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.google.com"
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = os.environ.get("GMAIL_USERNAME")
+EMAIL_HOST_PASSWORD = os.environ.get("GMAIL_PASSWORD")
+
+print(os.environ.get("GMAIL_USERNAME"))
