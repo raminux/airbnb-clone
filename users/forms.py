@@ -41,4 +41,6 @@ class SignUpForm(forms.ModelForm):
         password = self.cleaned_data.get("password")
         user.username = email
         user.set_password(password)
+        print("1111111")
         user.save()
+        print("222222")

@@ -1,5 +1,8 @@
+import uuid
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from django.conf import settings
+from django.core.mail import send_mail
 
 
 class User(AbstractUser):
@@ -68,8 +71,21 @@ class User(AbstractUser):
         default=CURRENCY_USD,
     )
     superhost = models.BooleanField(default=False)
-    email_confirmation = models.BooleanField(default=False)
+    email_verified = models.BooleanField(default=False)
     email_secret = models.CharField(max_length=120, default="", blank=True)
 
     def verify_email(self):
-        pass
+        if self.email_verified is False:
+            secret = uuid.uuid4().hex
+            self.email_secret = secret
+            send_mail(
+                "Verify Airbnb account",
+                "Verify account",
+                settings.EMAIL_HOST_USER,
+                [
+                    self.email,
+                ],
+                fail_silently=False,
+            )
+            self.save()
+        return
