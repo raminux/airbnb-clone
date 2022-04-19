@@ -80,7 +80,7 @@ class User(AbstractUser):
             self.email_secret = secret
             send_mail(
                 "Verify Airbnb account",
-                "Verify account",
+                f"Verify account: This is your secret {self.email_secret}",
                 settings.EMAIL_HOST_USER,
                 [
                     self.email,
