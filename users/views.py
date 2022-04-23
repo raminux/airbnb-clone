@@ -1,10 +1,10 @@
 import os
 import requests
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import redirect, reverse
 from django.urls import reverse_lazy
-from django.views import View
 from django.views.generic import FormView
 from django.contrib.auth import authenticate, login, logout
+from django.core.files.base import ContentFile
 from . import forms, models
 
 
@@ -97,6 +97,7 @@ def github_callback(request):
                 print(f"profile_json:-------------{profile_json}")
                 username = profile_json.get("login", None)
                 email = profile_json.get("email", None)
+                avatar_url = profile_json.get("avatar_url", None)
                 if username is not None and email is not None:
                     name = profile_json.get("name")
                     bio = profile_json.get("bio", None)
@@ -117,6 +118,12 @@ def github_callback(request):
                         )
                         user.set_unusable_password()
                         user.save()
+                        if avatar_url is not None:
+                            avatar_request = requests.get(avatar_url)
+                            print(avatar_request.content)
+                            user.avatar.save(
+                                f"{user}-avatar", ContentFile(avatar_request.content)
+                            )
 
                     login(request, user)
                     return redirect(reverse("core:home"))
