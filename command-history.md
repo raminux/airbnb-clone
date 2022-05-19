@@ -418,6 +418,18 @@ It's fast, flexible, and reliable — with zero-runtime.
 
 10. `$> npm run css`
 
+> In order to enable Django server to access the generated css files, it is required to add the following code into the settings.py file:
+```python
+STATIC_URL = "/static/"
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+```
+> Also, we must enable css usage in the project by adding the following lines to the base.html template:
+```html
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/styles.css' '%}">
+```
+
 
 
 
