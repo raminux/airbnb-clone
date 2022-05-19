@@ -379,3 +379,46 @@ redirect_url = f"https://github.com/login/oauth/authorize?client_id={client_id}&
 5. Also, it is required to add different login methods to the User model.
 
 6. And one final point is that in order to be able to read the user email from GitHub, the user must make his/her email public via the github settings.
+
+## Tailwindcss
+Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to a static CSS file.
+
+It's fast, flexible, and reliable — with zero-runtime.
+
+> Install **Tailwind Css IntelliSense** for vscode.
+
+### Tailwindcss installation
+1. We need to install nodejs and npm:
+`$> sudo apt install nodejs npm`
+
+2. Initialize node project:
+`$> npm init`
+
+3. Install required node packages
+`$> npm install gulp gulp-postcss gulp-sass gulp-csso node-sass autoprefixer -D`
+
+4. Install tailwindcss
+`$> npm install tailwindcss -D`
+
+5. Add node_modules to .gitignore.
+
+6. `$> npx tailwind init`
+
+7. Create the following directory structure:
+`$> mkdir assets`
+`$> mkdir assets/scss`
+`$> touch assets/scss/styles.scss`
+
+8. Add `gulpfile.js` and write some init code.
+
+9. Add this to the package.json
+`"scripts":{
+  "css": "gulp"
+}`
+
+10. `$> npm run css`
+
+
+
+
+
