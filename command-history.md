@@ -430,6 +430,29 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 <link rel="stylesheet" href="{% static 'css/styles.css' '%}">
 ```
 
+> **Size in Tailwindcss**
+There is a measurement unit in Tailwindcss called ==*rem*==. The **em** in this unit represents the closest *font-size* of the class. For example:
+```css
+.box{
+  font-size: 20px;
+  .child{
+    width: 0.5em;
+  }
+}
+```
+Here, `0.5em` is equal to `10px`. But `rem` means root em. The example below shows the concept:
+```css
+html{
+  font-size: 10px;
+}
+.box {
+  font-size: 20px;
+  .child{
+    width: 0.5rem;
+  }
+}
+```
+Here, the width of child will be `5px`.
 
 
 
