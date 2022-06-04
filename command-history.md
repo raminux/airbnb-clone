@@ -429,6 +429,8 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 <link rel="stylesheet" href="{% static 'css/styles.css' '%}">
 ```
+> It must be pointed out that the tailwindcss's Play CDN is a good option for development purposes. However, for real performance, it is better to the above method. 
+
 
 > **Size in Tailwindcss**
 There is a measurement unit in Tailwindcss called ==*rem*==. The **em** in this unit represents the closest *font-size* of the class. For example:
@@ -453,6 +455,11 @@ html{
 }
 ```
 Here, the width of child will be `5px`.
+
+### Useful extensions for designers
+- Page ruler
+- Colorzilla
+- Coolors.co
 
 
 

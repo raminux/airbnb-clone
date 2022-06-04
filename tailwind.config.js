@@ -1,7 +1,9 @@
 module.exports = {
-  content: [],
+  content: ['./templates/*'],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    
+  ],
 }
