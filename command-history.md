@@ -464,4 +464,7 @@ Here, the width of child will be `5px`.
 
 > `vh` in css means viewport height.
 
---> problem in h-25vh, 125, 5:52
+## How to add room_card?
+1- First, create an html file in partials named `room_card.html`.
+2- To find the first photo of each room, we can add a method to the model class to extract it as below. The name of the method is `first_photo`.
+3- Then call that method using the django template language as `{{room.first_photo}}`
